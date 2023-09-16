@@ -1,4 +1,5 @@
 # Pokedex
+Proyecto desarrollador por Agustín Rodríguez para el puesto de Frontend Developer (Vue.js) en Global66
 
 En este proyecto de Vue 3, hemos seleccionado cuidadosamente diversas librerías y dependencias para optimizar la experiencia del usuario y facilitar el desarrollo. A continuación, explicamos por qué hemos utilizado cada una de ellas:
 
