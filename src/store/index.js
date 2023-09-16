@@ -2,7 +2,6 @@ import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate';
 
 export default createStore({
-    // state es donde se almacenan los datos de la aplicación, esto se accede desde cualquier componente
     state: {
         pokemons: [],
         pokemon: {},
@@ -11,8 +10,7 @@ export default createStore({
         },
         favorites: [],
     },
-    // getters son funciones que se utilizan para obtener datos de la store (states), se pueden utilizar para filtrar, ordenar, etc.
-    // NUNCA TOMAR LOS DATOS DEL STATE DIRECTAMENTE, SIEMPRE UTILIZAR GETTERS (usar mapGetters, usar metodos que retornen data del state)
+
     getters: {
         getPokemons: (state) => {
             if (state.filter.query.length > 0) {
@@ -32,7 +30,7 @@ export default createStore({
             }
         }
     },
-    // mutations son funciones que se utilizan para modificar el estado de la store (states), estas funciones son síncronas, es decir, no se pueden utilizar para hacer peticiones asíncronas
+
     mutations: {
         setPokemons(state, payload) {
             const pokemons = payload.map(pokemon => {
@@ -75,7 +73,7 @@ export default createStore({
             }
         },   
     },
-    // actions son funciones que se utilizan para modificar el estado de la store (states), estas funciones son asíncronas, es decir, se pueden utilizar para hacer peticiones asíncronas (axios, fetch, etc.)
+
     actions: {
         async fetchPokemons({ commit }) {
             const pokemosStorage = JSON.parse(localStorage.getItem('vuex')) ?? []
@@ -91,7 +89,7 @@ export default createStore({
                 }
             }
         },
-        // get a specific pokemon
+
         async fetchPokemon({ commit }, name) {
             try {
                 const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -102,7 +100,7 @@ export default createStore({
             }
         },
     },
-    // modules son objetos que se utilizan para dividir la store en módulos, esto es útil para cuando la aplicación crece y se vuelve compleja
+    
     modules: {
     },
 

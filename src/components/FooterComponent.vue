@@ -25,7 +25,6 @@
     const store = useStore();
     const inputSearch = document.getElementById('search');
 
-    // if current route is list, setQuery to empty string
     const resetQuery = () => {
         if (router.currentRoute.value.name === 'list') {
             inputSearch.value = '';
@@ -35,8 +34,6 @@
         }
     }
 </script>
-
-<!-- Darle estilo a los links cuando esten en la ruta -->
 
 <style scoped>
     .router-link-active {

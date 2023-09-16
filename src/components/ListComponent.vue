@@ -30,8 +30,7 @@
             required: true,
         },
     });
-
-    //if refresh the page, fetch the pokemons again
+    
     onMounted(() => {
         if (pokemons.length === 0) {
             store.dispatch('fetchPokemons');
