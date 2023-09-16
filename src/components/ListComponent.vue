@@ -46,8 +46,8 @@
         Swal.fire({
             html:
                 `<section class="relative bg-center bg-no-repeat bg-cover h-[13rem]" style="background-image: url(${bgPokemon})">` +
-                    '<div class="flex items-center justify-center w-full pt-7">' +
-                        '<img src='+ modalData.value?.sprites?.other["official-artwork"]?.front_default +' alt="pokemon-img" width="180" class="mx-auto text-center">' +
+                    '<div class="flex items-center justify-center w-full">' +
+                        '<img src='+ modalData.value?.sprites?.other["official-artwork"]?.front_default +' alt="pokemon-img" width="180" class="mx-auto text-center mt-6">' +
                     '</div>' +
                 '</section>' +
                 `<section class="flex flex-col items-start justify-center mt-4 mx-4 mb-4 space-y-3"> ` +
