@@ -1,7 +1,7 @@
 <template>
     <footer class="fixed bottom-0 bg-white w-full">
         <div class="max-w-xl grid grid-cols-2 gap-x-5 py-4 px-7 sm:px-0 mx-auto">
-            <router-link class="mx-auto px-5 py-3 bg-gray-bf rounded-full text-white-f5 transition-colors 0.1s w-full text-center flex justify-center items-center gap-x-3" :to="{ name: 'list' }">
+            <router-link class="mx-auto px-5 py-3 bg-gray-bf rounded-full text-white-f5 transition-colors 0.1s w-full text-center flex justify-center items-center gap-x-3" :to="{ name: 'list' }" @click="resetQuery">
                 <figure>
                     <img src="../assets/img/allIcon.svg" alt="all-icon">
                 </figure>
@@ -18,7 +18,22 @@
 </template>
 
 <script setup>
-    import { RouterLink } from 'vue-router';
+    import { RouterLink, useRouter } from 'vue-router';
+    import { useStore } from 'vuex';
+
+    const router = useRouter();
+    const store = useStore();
+    const inputSearch = document.getElementById('search');
+
+    // if current route is list, setQuery to empty string
+    const resetQuery = () => {
+        if (router.currentRoute.value.name === 'list') {
+            inputSearch.value = '';
+            store.commit('setQuery', '');
+        } else {
+            router.push({ name: 'list' });
+        }
+    }
 </script>
 
 <!-- Darle estilo a los links cuando esten en la ruta -->
