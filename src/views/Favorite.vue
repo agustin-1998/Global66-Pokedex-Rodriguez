@@ -1,5 +1,5 @@
 <template>
-    <section class="py-9 px-7 sm:px-0 max-w-xl mx-auto">
+    <section class="py-9 px-7 max-w-xl mx-auto">
         <search-component />
         <list-component :pokemons="pokemons" />
     </section>
