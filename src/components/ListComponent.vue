@@ -97,9 +97,7 @@
             })
         });
 
-        disabledImg.addEventListener('click', (e) => {
-            console.log(e)
-            e.preventDefault();
+        disabledImg.addEventListener('click', () => {
             activeImg.style.display = 'block';
             disabledImg.style.display = 'none';
             store.commit('setFavoriteList', modalData.value?.name);
@@ -115,8 +113,7 @@
         });
 
         const share = document.getElementById('share');
-        share.addEventListener('click', (e) => {
-            e.preventDefault();
+        share.addEventListener('click', () => {
             Swal.fire({
                 toast: true,
                 icon: 'success',

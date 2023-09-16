@@ -16,7 +16,7 @@ export default createStore({
     getters: {
         getPokemons: (state) => {
             if (state.filter.query.length > 0) {
-                return state.pokemons.filter(pokemon => pokemon.name.includes(state.filter.query))
+                return state.pokemons.filter(pokemon => pokemon?.name.includes(state.filter.query))
             } else {
                 return state.pokemons
             }
@@ -26,7 +26,7 @@ export default createStore({
         },  
         getFavorites: (state) => {
             if (state.filter.query.length > 0) {
-                return state.favorites.filter(pokemon => pokemon.name.includes(state.filter.query))
+                return state.favorites.filter(pokemon => pokemon?.name.includes(state.filter.query))
             } else {
                 return state.favorites
             }
@@ -52,7 +52,7 @@ export default createStore({
             return state.filter.query = query
         },
         setFavoriteList(state, payload) {
-            const pokemon = state.pokemons.find(pokemon => pokemon.name === payload)
+            const pokemon = state.pokemons.find(pokemon => pokemon?.name === payload)
             pokemon.isFavorite = !pokemon.isFavorite
             if (pokemon.isFavorite) {
                 state.favorites.push(pokemon)
@@ -62,14 +62,14 @@ export default createStore({
             return state.pokemon.isFavorite = true
         },
         removeFavoriteList(state, payload) {
-            const pokemon = state.pokemons.find(pokemon => pokemon.name === payload)
+            const pokemon = state.pokemons.find(pokemon => pokemon?.name === payload)
             pokemon.isFavorite = !pokemon.isFavorite
             if (!pokemon.isFavorite) {
-                state.favorites = state.favorites.filter(pokemon => pokemon.name !== payload)
+                state.favorites = state.favorites.filter(pokemon => pokemon?.name !== payload)
             }
             let { favorites } = JSON.parse(localStorage.getItem('vuex')) ?? []
             if (favorites) {
-                favorites = favorites.filter(pokemon => pokemon.name !== payload)
+                favorites = favorites.filter(pokemon => pokemon?.name !== payload)
                 localStorage.setItem('vuex', JSON.stringify({ favorites }))
                 return favorites
             }
@@ -79,8 +79,8 @@ export default createStore({
     actions: {
         async fetchPokemons({ commit }) {
             const pokemosStorage = JSON.parse(localStorage.getItem('vuex')) ?? []
-            if (pokemosStorage.pokemons.length > 0) {
-                return this.state.pokemons = pokemosStorage.pokemons
+            if (pokemosStorage?.pokemons?.length > 0) {
+                return this.state.pokemons = pokemosStorage?.pokemons
             } else {
                 try {
                     const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100')

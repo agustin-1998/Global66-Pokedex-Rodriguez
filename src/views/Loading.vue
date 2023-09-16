@@ -12,8 +12,8 @@
     const router = useRouter();
     const store = useStore();
     
-    onMounted(() => {
-        store.dispatch('fetchPokemons');
+    onMounted( async () => {
+        await store.dispatch('fetchPokemons');
         setTimeout(() => {
             router.push({ name: 'list' });
         }, 2500);
