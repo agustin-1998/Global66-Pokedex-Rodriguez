@@ -1,7 +1,7 @@
 # Pokedex
 Proyecto desarrollador por Agustín Rodríguez para el puesto de Frontend Developer (Vue.js) en Global66
 
-En este proyecto de Vue 3, seleccione cuidadosamente diversas librerías y dependencias para optimizar la experiencia del usuario y facilitar el desarrollo. A continuación, explico por qué utilizacé cada una de ellas:
+En este proyecto de Vue 3, seleccioné cuidadosamente diversas librerías y dependencias para optimizar la experiencia del usuario y facilitar el desarrollo. A continuación, explico por qué utilizacé cada una de ellas:
 
 ### AOS (Animate On Scroll)
 Decidí incorporar la librería AOS debido a la naturaleza de la página web. La animación de elementos al desplazarse en la página web contribuye significativamente a mejorar la experiencia del usuario (UX) y complementa el diseño de la interfaz del usuario (UI). AOS proporciona una forma eficiente de agregar animaciones a elementos clave de nuestra web.
