@@ -1,32 +1,45 @@
 # Pokedex
 Proyecto desarrollador por Agustín Rodríguez para el puesto de Frontend Developer (Vue.js) en Global66
 
-En este proyecto de Vue 3, hemos seleccionado cuidadosamente diversas librerías y dependencias para optimizar la experiencia del usuario y facilitar el desarrollo. A continuación, explicamos por qué hemos utilizado cada una de ellas:
+## Descripción del proyecto
+Proyecto que muestra un listado de pokemons con el detalle de cada uno de estos, permitiendo guardar como favoritos los pokemones que más te gustan. 
 
-### AOS (Animate On Scroll)
-Decidimos incorporar la librería AOS debido a la naturaleza de nuestra página web. La animación de elementos al desplazarse en la página web contribuye significativamente a mejorar la experiencia del usuario (UX) y complementa nuestro diseño de interfaz de usuario (UI). AOS nos proporciona una forma eficiente de agregar animaciones a elementos clave de nuestra web.
+En este proyecto tuve la oportunidad de poder demostrar mis habilidades de diseño, cumpliendo con el diseño estipulado en Figma.
 
-### Sweetalert2
-Sweetalert2 es una librería ampliamente reconocida que nos permite crear modales personalizables, toasters y otros elementos dinámicos de manera rápida y sencilla. Dada la limitación de tiempo en el desarrollo de este proyecto, Sweetalert2 se convirtió en la elección ideal para añadir dinamismo a nuestra web, sin comprometer la calidad ni la experiencia del usuario.
+## Construcción del proyecto
+En este proyecto fue creado con Vue 3 - Vite. Lo primero que hice fue plantear las rutas, componentes, definición de librerías y frameworks para acelerar la construcción del mismo. A medida que iba programando me iba encontrando con distintas dificultades como aprender a utilizar la librería de vue-persistancestate, y algunas cuestiones de diseño para poder acercarme lo mas posible al diseño de figma. Para solucionar estos problemas fue centrarme en dividir estos en partes pequeñas, permitiendome tener una visión mas centrada de estos y así poder solucionar el problema padre.
 
-### Vuex
-VueX es una librería de Vue que habilita la manipulación de estados y métodos de forma global. Esta característica nos permite mantener un esquema centralizado donde cualquier componente puede acceder a estos datos globales. La implementación de VueX ha acelerado significativamente el proceso de construcción de la web, permitiéndonos desarrollar de manera más eficiente.
+Lo que más me gusto del proyecto fue la implementación de un modal que muestre los detalles del pokemon, además, me encanto tener el desafío de copiar el diseño del Figma y dar mi mayor esfuerzo.
 
-### Vuex-persistancestate
-Hemos integrado Vuex-persistancestate para optimizar el almacenamiento de datos en el cliente y garantizar su persistencia. Esta librería crea variables en el localStorage utilizando un array que contiene los estados de Vuex como argumento. Esta elección nos ha permitido reducir la cantidad de código necesario para guardar datos en el lado del cliente, simplificando así el manejo de datos.
+## Librerías y Frameworks
+Voy a dar un pequeño detalle de las tecnologías que utilicé para el proyecto.
 
-### Vue-router
-Vue-router es una librería nativa de Vue que facilita la manipulación de las rutas en nuestra aplicación. La integración de Vue-router es esencial para la navegación dentro de nuestra web, permitiendo una transición suave entre las diferentes vistas y componentes de la aplicación.
+- [AOS (Animate On Scroll)] --> Ayuda a crear transiciones para el scroll. Use esta librería ya que la he usado muchas veces y me parece muy personalizable. Contiene lindas transiciones para darle mas vida a la página.
+- [SweetAlert2] --> Permite crear modales y toasters iteractivos con mucha facilidad. Gracias a esta librería pude construir el modal y los toasters que muestran un mensaje cuando se realiza una acción como dar a favoritos, quitar el favorito, copiar en portapapeles, entre otros. El modal que muestra los detalles del pokemon fue creada con sweetalert.
+- [Vuex] --> Ayuda al almacenamiento de la información en el state propio, además de crear métodos propios para la manipulación específica de estos estados globales. Esta librería facilitó muchisimo la construcción del proyecto ya que pude acceder a los estados globales y su métodos desde cualquier lugar del proyecto.
+- [Vuex-persistancestate] --> Es una librería que me permitió almacenar en el localStorage los estados globales como los pokemones y los favoritos. Decidí usar esta librería ya que me facilitaba la tarea de guardarlos en el localStorage para que tambien al refrescar la página, pueda llamar a los datos almacenados en el cliente y no a la API, esto me permitió optimizar los recursos del sistema llamando un array existente y no al API constantemente.
+- [Vue-router] --> Ayuda a crear las rutas para el desplazamiento entre vistas. Fue la primera dependencia que se instaló ya que sin ella no se podía crear las vistas pedidas en los requirements.
+- [TailwindCSS] --> Framework de CSS para crear interfaces más rápido, gracias a esto logré crear una página como la estipulada en el Figma. Me permitió además hacer responsive la web. Todo el proyecto esta construída sobre esta base.
 
-### Tailwind CSS
-Tailwind CSS es un framework de CSS que ofrece una gran flexibilidad y personalización en la estilización de los elementos de la página. Su facilidad de uso nos ha permitido mantenernos fieles al diseño propuesto en Figma, logrando una coherencia visual en todo el proyecto. Tailwind CSS ha simplificado el proceso de diseño y estilización de nuestra aplicación web.
-
-En resumen, la selección y uso de estas librerías y dependencias en nuestro proyecto de Vue 3 ha sido fundamental para optimizar la experiencia del usuario, acelerar el desarrollo y garantizar la persistencia de datos, al tiempo que mantenemos la coherencia en el diseño de nuestra aplicación web. Cada elección ha sido estratégica y contribuye de manera significativa a la calidad y eficiencia de nuestro proyecto.
+## Mejoras
+Una de las mejoras que haría es centralizarme en componentizar aún mas el proyecto para ahorrar cantidad de código como en el caso del modal. Por temas de tiempos no pude hacerlo como me hubiera gustado pero logré hacer lo suficiente para que quedé lo más escalable posible. Otro aspecto que mejoraría sería el crear funciones reutilizables en el store de vuex.
 
 ### Proyecto en Línea
 https://global66-pokedex-rodriguez-je5r94g68-repolloso.vercel.app/
 
+Muchas gracias por darme esta oportunidad, espero poder haber cumplido con las expectativas para poder formar parte de esta gran compañía.
+
 ## Project Setup
+
+* Tengo instalado Nodejs v18.16.0 y npm v9.5.1
+
+```sh
+git clone https://github.com/agustin-1998/Global66-Pokedex-Rodriguez.git
+```
+
+```sh
+cd Global66-Pokedex-Rodriguez
+```
 
 ```sh
 npm install
