@@ -16,7 +16,7 @@
         await store.dispatch('fetchPokemons');
         setTimeout(() => {
             router.push({ name: 'list' });
-        }, 2500);
+        }, 2000);
     });
 
 </script>
