@@ -146,9 +146,6 @@
     }
 
     .swal2-close{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
         color: skyblue;
         font-size: 1.5rem;
