@@ -1,6 +1,6 @@
 <template>
     <section class="max-w-xl grid place-items-center mx-auto h-screen">
-        <img src="../assets/img/Loader.png" alt="loading-icon" class="animate-spin" width="106" loading="lazy" data-aos="zoom-in">
+        <img src="../assets/img/Loader.png" alt="loading-icon" class="animate-spin" width="106" loading="lazy">
     </section>
 </template>
 
