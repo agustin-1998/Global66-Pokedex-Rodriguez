@@ -26,6 +26,8 @@ En resumen, la selección y uso de estas librerías y dependencias en nuestro pr
 ### Proyecto en Línea
 https://global66-pokedex-rodriguez-je5r94g68-repolloso.vercel.app/
 
+Muchas gracias por darme esta oportunidad, espero poder haber cumplido con las expectativas para poder formar parte de esta gran compañía. 
+
 ## Project Setup
 
 ```sh
