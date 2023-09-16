@@ -1,5 +1,5 @@
 <template>
-    <figure class="cursor-poiner hover:opacity-80 inline-block col-span-1 place-self-end">
+    <figure class="cursor-poiner hover:opacity-80 inline-block place-self-end">
         <!-- use the v-show to not render a new img, just hide it -->
         <img :src="disabled" v-show="pokemon?.isFavorite === false" alt="arrow-down" width="44" @click="favPokemon(pokemon)">
         <img :src="active" v-show="pokemon?.isFavorite === true" alt="arrow-down" width="44" @click="removeFavPokemon(pokemon)">

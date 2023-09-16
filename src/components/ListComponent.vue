@@ -1,8 +1,8 @@
 <template>
     <section class="w-full mt-10 mb-14">
         <ul class="w-full space-y-3" v-if="pokemons.length > 0">
-            <li v-for="(pokemon, index) in pokemons" :key="index" class="w-full grid grid-cols-7 cursor-pointer rounded-md bg-white pr-2 py-1 transition-colors 0.2s hover:bg-gray-bf" data-aos="fade-up">
-                <h2 class="col-span-6 flex items-center justify-start font-semibold w-full h-full capitalize ml-4 mr-2" @click="openModal(pokemon)">{{ pokemon.name }}</h2> 
+            <li v-for="(pokemon, index) in pokemons" :key="index" class="w-full flex items-center cursor-pointer rounded-md bg-white pr-2 py-1 transition-colors 0.2s hover:bg-gray-bf" data-aos="fade-up">
+                <p class="text-start font-semibold w-full h-full capitalize ml-4 mr-2" @click="openModal(pokemon)">{{ pokemon.name }}</p> 
                 <favorite-component :pokemon="pokemon"/>
             </li>
         </ul>
@@ -145,6 +145,9 @@
     }
 
     .swal2-close{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         color: skyblue;
         font-size: 1.5rem;
@@ -157,7 +160,12 @@
         border: 2px solid skyblue;
     }
 
+    .swal2-close:focus{
+        outline: none;
+    }
+
     .swal2-close:hover{
         background-color: rgb(220, 220, 220);
+        color: #ffffffff;
     }
 </style>
