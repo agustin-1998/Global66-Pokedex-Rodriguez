@@ -7,7 +7,7 @@ Proyecto que muestra un listado de pokemons con el detalle de cada uno de estos,
 En este proyecto tuve la oportunidad de poder demostrar mis habilidades de diseño, cumpliendo con el diseño estipulado en Figma.
 
 ## Construcción del proyecto
-En este proyecto fue creado con Vue 3 - Vite. Lo primero que hice fue plantear las rutas, componentes, definición de librerías y frameworks para acelerar la construcción del mismo. A medida que iba programando me iba encontrando con distintas dificultades como aprender a utilizar la librería de vue-persistancestate, y algunas cuestiones de diseño para poder acercarme lo mas posible al diseño de figma. Para solucionar estos problemas fue centrarme en dividir estos en partes pequeñas, permitiendome tener una visión mas centrada de estos y así poder solucionar el problema padre.
+Este proyecto fue creado con Vue 3 - Vite. Lo primero que hice fue plantear las rutas, componentes, definición de librerías y frameworks para acelerar la construcción del mismo. A medida que iba programando me iba encontrando con distintas dificultades como aprender a utilizar la librería de vue-persistancestate, y algunas cuestiones de diseño para poder acercarme lo mas posible al diseño de figma. Para solucionar estos problemas fue centrarme en dividir estos en partes pequeñas, permitiendome tener una visión mas centrada de estos y así poder solucionar el problema padre.
 
 Lo que más me gusto del proyecto fue la implementación de un modal que muestre los detalles del pokemon, además, me encanto tener el desafío de copiar el diseño del Figma y dar mi mayor esfuerzo.
 
